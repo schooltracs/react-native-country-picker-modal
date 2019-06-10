@@ -85,7 +85,8 @@ export default class CountryPicker extends Component {
     renderFilter: PropTypes.func,
     showCallingCode: PropTypes.bool,
     filterOptions: PropTypes.object,
-    showCountryNameWithFlag: PropTypes.bool
+    showCountryNameWithFlag: PropTypes.bool,
+    getCountryName: PropTypes.func,
   }
 
   static defaultProps = {
@@ -248,7 +249,9 @@ export default class CountryPicker extends Component {
 
   getCountryName(country, optionalTranslation) {
     const translation = optionalTranslation || this.props.translation || 'eng'
-    return country.name[translation] || country.name.common
+    const name = country.name[translation] || country.name.common
+    const getCountryName = this.props.getCountryName
+    return getCountryName ? getCountryName(name, country) : name
   }
 
   setVisibleListHeight(offset) {
