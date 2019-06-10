@@ -293,6 +293,7 @@ export type TranslationLanguageCode =
   | 'svk'
   | 'fin'
   | 'zho'
+  | 'zh-t'
   | 'isr'
 
 export enum FlagType {
