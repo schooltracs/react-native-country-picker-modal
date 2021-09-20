@@ -18,7 +18,7 @@ import {
   ScrollView,
   Platform
 } from 'react-native'
-import { ListView } from 'deprecated-react-native-listview'
+import ListView from 'deprecated-react-native-listview'
 
 import Fuse from 'fuse.js'
 
