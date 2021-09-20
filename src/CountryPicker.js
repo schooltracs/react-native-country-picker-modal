@@ -13,11 +13,12 @@ import {
   Modal,
   Text,
   TextInput,
-  ListView,
+  // ListView,
   FlatList,
   ScrollView,
   Platform
 } from 'react-native'
+import { ListView } from 'deprecated-react-native-listview'
 
 import Fuse from 'fuse.js'
 
